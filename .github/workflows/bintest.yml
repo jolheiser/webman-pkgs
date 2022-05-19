@@ -1,0 +1,21 @@
+name: "bintest"
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  bintest:
+    name: 'bintest new/modified recipes'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - id: files
+        name: Get changed files
+        uses: jitterbit/get-changed-files@v1
+      - name: Run bintest
+        run: |
+          for file in ${{ steps.files.outputs.added_modified }}; do
+            [[ file =~ ^pkgs\/ ]] && go run github.com/candrewlee14/webman@latest -l "." dev bintest ${file}
+          done
