@@ -20,11 +20,11 @@ os_map:
   linux:
     name: linux
     ext: tar.xz
-    bin_path: bin/
+    bin_path: ban/
   macos:
     name: darwin
     ext: tar.gz
-    bin_path: bin/
+    bin_path: bon/
   win:
     name: win
     ext: zip
