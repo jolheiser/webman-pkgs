@@ -19,7 +19,7 @@ jobs:
         name: Get changed files
         uses: tj-actions/changed-files@v20
         with:
-          path: pkgs
+          files: "pkgs/*.webman-pkg.yml"
       - name: Run bintest
         run: |
           for file in ${{ steps.files.outputs.all_modified_files }}; do
