@@ -1,0 +1,33 @@
+tagline: Validate and define text-based and dynamic configuration
+about: |
+  CUE is an open source data constraint language which aims to simplify tasks involving defining and using data.
+
+  It is a superset of JSON, allowing users familiar with JSON to get started quickly.
+
+git_user: cue-lang
+git_repo: cue
+info_url: https://github.com/[GIT_USER]/[GIT_REPO]
+releases_url: https://github.com/[GIT_USER]/[GIT_REPO]/releases/
+source_url: https://github.com/[GIT_USER]/[GIT_REPO]/
+
+base_download_url: https://github.com/[GIT_USER]/[GIT_REPO]/releases/download/v[VER]/
+filename_format: cue_v[VER]_[OS]_[ARCH].[EXT]
+version_format: v[VER]
+latest_strategy: github-release
+
+os_map:
+  linux:
+    name: linux
+    ext: tar.gz
+    bin_path: cue
+  macos:
+    name: darwin
+    ext: tar.gz
+    bin_path: cue
+  win:
+    name: windows
+    ext: zip
+    bin_path: cue
+arch_map:
+  amd64: amd64
+  arm64: arm64
